@@ -4,6 +4,10 @@ All notable changes to Gogs are documented in this file.
 
 ## 0.15.0+dev (`main`)
 
+### Fixed
+
+- _Security:_ SSRF via mirror address update bypassing clone address validation.
+
 ### Removed
 
 - The `gogs cert` subcommand. [#8153](https://github.com/gogs/gogs/pull/8153)
