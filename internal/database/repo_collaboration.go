@@ -125,8 +125,8 @@ func (r *Repository) GetCollaborators() ([]*Collaborator, error) {
 
 // ChangeCollaborationAccessMode sets new access mode for the collaboration.
 func (r *Repository) ChangeCollaborationAccessMode(userID int64, mode AccessMode) error {
-	// Discard invalid input
-	if mode <= AccessModeNone || mode > AccessModeOwner {
+	// Collaborators can hold at most Admin access; Owner is reserved for the repository owner.
+	if mode <= AccessModeNone || mode > AccessModeAdmin {
 		return nil
 	}
 
