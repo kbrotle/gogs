@@ -4,6 +4,10 @@ All notable changes to Gogs are documented in this file.
 
 ## 0.15.0+dev (`main`)
 
+### Fixed
+
+- _Security:_ Repository collaborators with Admin access could escalate their own or others' access mode to Owner via the web UI.
+
 ### Removed
 
 - The `gogs cert` subcommand. [#8153](https://github.com/gogs/gogs/pull/8153)
